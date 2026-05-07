@@ -53,7 +53,7 @@ The most important design principle of Kubernetes,
 the reconciliation protocol, is not something unique to it.
 
 Reconciliation can be implemented solely on etcd,
-as has been shown by projects like Cillium,
+as has been shown by projects like Cilium,
 Calico Typha that support etcd-based control planes.
 The reason why this idea has not propagated further is
 the amount of work that was put into making 
