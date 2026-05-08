@@ -62,7 +62,7 @@ When you're writing controllers, there are few guidelines that will help make su
 
 1. If the primary resource your controller is reconciling supports ObservedGeneration in its status, make sure you correctly set it to metadata.Generation whenever the values between the two fields mismatches.
 
-    This lets clients know that the controller has processed a resource. Make sure that your controller is the main controller that is responsible for that resource, otherwise if you need to communicate observation via your own controller, you will need to create a different kind of ObservedGeneration in the Status of the resource.
+    This lets clients know that the controller has processed a resource. Make sure that your controller is the main controller that is responsible for that resource, otherwise if you need to communicate observation via your own controller, you will need to create a different kind of ObservedGeneration in the Status of the resource. For example, setting [ObservedGeneration on a condition](https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties).
 
 1. Consider using owner references for resources that result in the creation of other resources (eg. a ReplicaSet results in creating Pods). Thus you ensure that children resources are going to be garbage-collected once a resource managed by your controller is deleted. For more information on owner references, read more [here](https://git.k8s.io/design-proposals-archive/api-machinery/controller-ref.md).
 
