@@ -69,11 +69,6 @@ component autoscaling, and autoscaling of Kubernetes clusters themselves.
 This sig follows adheres to the Roles and Organization Management outlined in [sig-governance]
 and opts-in to updates and modifications to [sig-governance].
 
-### Deviations from [sig-governance]
-
-- SIG Autoscaling does not have chairs as a separate entity from tech
-  leads.  The tech leads have the responsibility of chairs.
-
 ### Subproject Creation
 
 SIG Technical Leads
